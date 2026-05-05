@@ -1,0 +1,159 @@
+/* ── Reset ── */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+/* ── Variables ── */
+:root {
+    --positive: #28a745;
+    --positive-bg: #d4edda;
+    --negative: #dc3545;
+    --negative-bg: #f8d7da;
+    --neutral: #6c757d;
+    --neutral-bg: #f0f0f0;
+    --btn-color: #333;
+    --btn-hover: #555;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+ 
+/* ── Base ── */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: var(--neutral-bg);
+    transition: background-color 0.3s ease;
+    padding: 20px;
+}
+ 
+/* ── Container ── */
+.container {
+    text-align: center;
+    padding: 40px;
+    border-radius: 20px;
+    background: white;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+    width: 100%;
+    max-width: 480px;
+}
+ 
+.container:hover {
+    transform: translateY(-5px);
+}
+ 
+/* ── Headings ── */
+h1 {
+    font-size: 28px;
+    margin-bottom: 16px;
+}
+ 
+h3 {
+    font-size: 16px;
+    color: var(--neutral);
+    margin-bottom: 10px;
+}
+ 
+/* ── Value & Status ── */
+#value {
+    font-size: 64px;
+    margin: 10px 0;
+    color: var(--neutral);
+    transition: color 0.3s ease;
+}
+ 
+#status {
+    font-size: 20px;
+    margin-bottom: 24px;
+    color: var(--neutral);
+    transition: color 0.3s ease;
+}
+ 
+/* ── Buttons ── */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+ 
+button {
+    padding: 12px 24px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--btn-color);
+    color: white;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+ 
+button:hover {
+    background-color: var(--btn-hover);
+}
+ 
+button:active {
+    transform: scale(0.95);
+}
+ 
+/* ── History ── */
+.history {
+    border-top: 1px solid #e0e0e0;
+    padding-top: 20px;
+}
+ 
+#history-list {
+    list-style: none;
+    max-height: 200px;
+    overflow-y: auto;
+    margin-bottom: 12px;
+}
+ 
+#history-list li {
+    font-size: 14px;
+    padding: 6px 0;
+    border-bottom: 1px solid #f0f0f0;
+    color: #444;
+}
+ 
+#history-list li:last-child {
+    border-bottom: none;
+}
+ 
+#clear-history {
+    font-size: 13px;
+    padding: 8px 16px;
+    background-color: #aaa;
+}
+ 
+#clear-history:hover {
+    background-color: #888;
+}
+ 
+/* ── Media Queries ── */
+@media (max-width: 480px) {
+    .container {
+        padding: 24px 16px;
+    }
+ 
+    h1 {
+        font-size: 22px;
+    }
+ 
+    #value {
+        font-size: 48px;
+    }
+ 
+    #status {
+        font-size: 16px;
+    }
+ 
+    button {
+        padding: 10px 18px;
+        font-size: 16px;
+    }
+}
